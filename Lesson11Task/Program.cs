@@ -10,9 +10,14 @@ namespace Lesson11Task
         public void Space(string str)
         {
             string spaceStr = null;
-            foreach (var ch in str)
+            for (var i = 0; i < str.Length-1; i++)
             {
-                spaceStr += ch + "_";
+                
+                spaceStr += str[i] + "_";
+                if (i == str.Length-2)
+                {
+                    spaceStr += str[^1];
+                }
             }
 
             Console.WriteLine($"Spaced string \"{spaceStr}\"");
