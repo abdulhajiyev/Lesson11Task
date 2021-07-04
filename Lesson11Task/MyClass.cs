@@ -6,18 +6,12 @@ namespace Lesson11Task
     {
         public void Space(string str)
         {
-            string spaceStr = null;
-            for (var i = 0; i < str.Length-1; i++)
+            for (int i = 1; i < str.Length; i++)
             {
-                
-                spaceStr += str[i] + "_";
-                if (i == str.Length-2)
-                {
-                    spaceStr += str[^1];
-                }
+                str = str.Insert(i, "_");
+                i++;
             }
-
-            Console.WriteLine($"Spaced string \"{spaceStr}\"");
+            Console.WriteLine($"Spaced string \"{str}\"");
         }
 
 
